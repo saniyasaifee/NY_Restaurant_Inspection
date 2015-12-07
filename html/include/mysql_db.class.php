@@ -61,7 +61,7 @@ class mysql_db
             $query .= 'LIMIT' . ($page_offset * $limit). ','.$limit;
         }
         $result = mysqli_query($this->mysql_link_id, $query) or die($query."<br />". "failed to execute.");
-        $arr_results = Array();
+        $arr_results = array();
         while($row = mysqli_fetch_array($result)){
             $arr_results[] = $row;
         }
